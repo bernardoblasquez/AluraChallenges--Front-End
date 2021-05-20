@@ -1,0 +1,29 @@
+Padrão de commit:
+
+<tipo>(<entidade>): <descrição> (#<id da issue>)
+
+ 
+
+Tipos de commit:
+
+- feat: Nova funcionalidade.
+
+- fix: Correção de erros, bugfix.
+
+- style: Mudança de layout, que não altera o sentido do código.
+
+- refactor: Qualquer mudança no código que não seja uma nova funcionalidade ou correção de erro.
+
+- perf: Mudança no código para melhorar a performance.
+
+-chore: Mudanças de build, bibliotecas, etc.
+
+ 
+
+
+Exemplos de commit:
+
+fix(sync): atribuição de id após inserir na API (#19)
+
+refactor(barraVerde): atualizando barra verde para utilizar token automaticamente (#118)
+style(): correção nas cores globais do sistema (#312)
