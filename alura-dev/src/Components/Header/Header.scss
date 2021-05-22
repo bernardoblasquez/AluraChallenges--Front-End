@@ -1,0 +1,121 @@
+%icon-size{
+    width: 48px;
+    height: 48px;
+}
+
+.header-logo{
+   // background-color: aqua;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row;
+    align-items: center;
+    padding-right: 20px;
+    
+    @media (min-width: 1440px){
+        display: flex;
+        width: 25%;
+        margin-left: 0;
+    }
+}
+
+.header-app{
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row;
+    align-items: center;
+    padding: 1rem;
+
+    @media (min-width: 768px){
+        padding: 2rem;
+    }
+}
+
+.header-form{
+    display: flex;
+    align-items: center;
+    height: 56px;
+    margin-left: auto;
+
+    @media (min-width: 768px){
+        width: 100%;
+        margin-left: 0;
+    }
+
+    @media (min-width: 1440px){
+        display: block;
+        width: 50%;
+        margin-left: 0;
+    }
+
+}
+
+.header-form{
+    &__search-input{
+        background: rgba(255, 255, 255, 0.16);
+        border-radius: 8px;
+        height: 56px;
+        border: none;
+        outline: none;
+        color: rgba(255, 255, 255, 0.64);
+        padding: 1rem  0.875rem;
+        width: 100%;
+        max-width: 756px;
+        display: none;
+
+        @media (min-width: 768px){
+            display: flex;
+            width: 100%;
+        }
+    }
+
+    &__search-icon{
+        @extend %icon-size;
+
+        @media (min-width: 768px){
+            display: none;
+            width: 100%;
+        }
+        
+    }
+}
+
+.header-menu{
+    display: flex;
+    height: 56px;
+    align-items: center;
+
+    @media (min-width: 1440px){
+        display: none;
+        width: 100%;
+    }
+}
+
+.header-menu{
+
+    &__icon{
+        @extend %icon-size;
+    }
+}
+
+.header-user{
+    display:none;
+
+    @media (min-width: 1440px){
+        display: flex;
+        justify-content: flex-end;
+        flex-flow: row;
+        align-items: center;
+        width:25%;
+    }  
+}
+
+.header-user{
+    &__avatar{
+        margin-right: 8px;
+        height: 32px;
+        width: 32px;
+    }
+}
+
+
+
