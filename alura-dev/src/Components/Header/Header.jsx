@@ -1,4 +1,6 @@
 //import styles from './Header.module.scss';
+
+import { useState } from 'react'
 import './Header.scss';
 import logo from '../../Images/Logo.svg'
 import searchIcon from '../../Images/search-icon.svg' 
@@ -6,6 +8,14 @@ import hamburgerIcon from '../../Images/hamburger-icon.svg'
 import avatarIcon from '../../Images/Avatar.png' 
 
 const Header = () => {
+
+    const [inputSearchSate, setInputSearchSate] = useState('Busque por Algo')
+
+    const inputSearchChangeHandler = (event) => {
+        setInputSearchSate(event.target.value)
+        console.log(inputSearchSate)
+    }
+
     return(
         <header className='header-app'>
             <div className="header-logo">
@@ -14,10 +24,16 @@ const Header = () => {
             
             
             <form action="" className="header-form" >
-                <input type="text" value="Busque por algo" className='header-form__search-input' />
+                <input type="text"  
+                    className="header-form__search-input" 
+                    value={inputSearchSate}
+                    onChange={inputSearchChangeHandler}
+                />
+
                 <img src={searchIcon}
                     className="header-form__search-icon" 
-                    alt="" />
+                    alt="" 
+                />
             </form>
 
             <div className="header-menu">
