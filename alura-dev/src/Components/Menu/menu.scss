@@ -2,13 +2,9 @@
 // Change px for rem 
 
 .menu{
-    &__title{
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 18px;
-        letter-spacing: .4rem; 
-        text-transform: uppercase;
-        margin: 0 0 16px 0;
+
+    &__link{
+        text-decoration: none;
     }
 
     &__list{   
