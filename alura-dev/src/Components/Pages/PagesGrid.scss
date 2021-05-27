@@ -1,0 +1,69 @@
+@mixin menu-column{
+    padding: 16px;
+    width: 25%;
+}
+.editor{
+    background-color: beige;
+}
+
+main{
+    padding: 0 16px;
+
+    @media (min-width: 1440px){
+        display: flex;
+    }
+}
+
+.grid-column{
+
+    &__title{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: .4rem; 
+        text-transform: uppercase;
+        margin: 0 0 16px 0;
+    }
+
+    &__menu{
+        @include menu-column;  
+        display: none;
+
+        @media (min-width: 1440px){
+            display: block;
+        }
+    }
+
+    &__right-menu{
+        padding: 0;
+        width: 100%;
+
+        @media (min-width: 1440px){
+            @include menu-column; 
+        }
+    }
+
+    &__editor{
+        color: black;
+        padding: 16px;
+        width: 100%;
+        margin-bottom: 40px;
+
+        @media (min-width: 1440px){
+            width: 50%
+        }
+    }
+
+    &__community{
+        color: black;
+        padding: 16px;
+        width: 100%;
+        background-color: white;
+        margin-bottom: 40px;
+
+        @media (min-width: 1440px){
+            width: 75%
+        }
+    }
+}
+
