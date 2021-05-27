@@ -71,6 +71,10 @@
             margin: auto;
             width: 100%;
         }
+
+        @media (min-width: 1440px){
+            margin-left: 0;
+        }
     }
 
     &__search-icon{
