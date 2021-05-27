@@ -3,21 +3,6 @@
     height: 48px;
 }
 
-.header-logo{
-   // background-color: aqua;
-    display: flex;
-    justify-content: flex-start;
-    flex-flow: row;
-    align-items: center;
-    padding-right: 20px;
-    
-    @media (min-width: 1440px){
-        display: flex;
-        width: 25%;
-        margin-left: 0;
-    }
-}
-
 .header-app{
     display: flex;
     justify-content: flex-start;
@@ -26,9 +11,27 @@
     padding: 1rem;
 
     @media (min-width: 768px){
-        padding: 2rem;
+        padding: 1rem;
     }
 }
+
+.header-logo{
+   // background-color: aqua;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row;
+    align-items: center;
+    padding: 0 40px 0 0;
+    
+    @media (min-width: 1440px){
+        display: flex;
+        width: 25%;
+        padding: 1rem;
+        margin-left: 0;
+    }
+}
+
+
 
 .header-form{
     display: flex;
@@ -44,6 +47,7 @@
     @media (min-width: 1440px){
         display: block;
         width: 50%;
+        padding: 0 1rem;
         margin-left: 0;
     }
 
@@ -64,6 +68,7 @@
 
         @media (min-width: 768px){
             display: flex;
+            margin: auto;
             width: 100%;
         }
     }
