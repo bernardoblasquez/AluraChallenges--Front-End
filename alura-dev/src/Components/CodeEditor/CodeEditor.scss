@@ -1,0 +1,67 @@
+
+%editor-config{
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    
+}
+
+.code-editor{
+    @extend %editor-config; 
+
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    background: #6BD1FF;
+    margin-bottom: 32px;
+
+    
+
+    &__window{
+        @extend %editor-config; 
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        padding-top: 40px;
+        border-radius: 8px;
+        background-color: #141414;
+        box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
+        overflow: hidden;
+
+        &::before{
+            content: '';
+            color: aliceblue;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            display: block;
+            background-image: url(../../Images/mac_buttons-icon.svg);
+            background-repeat: no-repeat;
+            height: 16px;
+            width: 52px;
+        }
+    }    
+
+    &__text-editor{
+        @extend %editor-config; 
+        
+        position: relative;
+        background-color: #141414;
+        padding: 16px;
+        color: white;
+        font-size: 14px;
+        line-height: 18px;
+        outline: none;
+        min-height: 302px;
+    }
+
+    &__highlight-button{
+        background: rgba(80, 129, 251, 0.08);
+        border-radius: 8px;
+        height: 56px;
+        color: white;
+    }
+}
+
