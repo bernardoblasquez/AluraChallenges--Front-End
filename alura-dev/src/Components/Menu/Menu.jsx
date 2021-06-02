@@ -12,6 +12,7 @@ const menu = (props) => {
                 <li className="menu__item">
                     <a href="xvdvv" className="menu__link">
                         <MenuIcon 
+                            activeLink={true}
                             icon={codeIcon}
                             href="sdfsdsdfs"
                             text='Editor de código'
@@ -22,6 +23,7 @@ const menu = (props) => {
                 <li className="menu__item">
                     <a href="sdads" className="menu__link">
                         <MenuIcon
+                            activeLink={false}
                             icon={communityIcon}
                             href="sdfsdsdfs"
                             text='Comunidade'
