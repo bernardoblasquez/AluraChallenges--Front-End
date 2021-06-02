@@ -9,11 +9,27 @@ import avatarIcon from '../../Images/Avatar.png'
 
 const Header = () => {
 
-    const [inputSearchSate, setInputSearchSate] = useState('Busque por Algo')
+    const inputSearchText = 'Busque por Algo';
+    const [inputSearchSate, setInputSearchSate] = useState(inputSearchText)
+    const [inputSearchFocusSate, setInputSearchFocusSate] = useState(false)
 
     const inputSearchChangeHandler = (event) => {
         setInputSearchSate(event.target.value)
         console.log(inputSearchSate)
+    }
+
+    const inputSearchFocusHandler = () => { 
+        if (inputSearchFocusSate === false){
+            setInputSearchSate('');
+            setInputSearchFocusSate(true);
+        }
+    }
+    
+    const inputSearchBlurHandler = () => { 
+        if (inputSearchSate === ''){
+            setInputSearchSate(inputSearchText);
+            setInputSearchFocusSate(false);
+        }
     }
 
     return(
@@ -28,6 +44,8 @@ const Header = () => {
                     className="header-form__search-input" 
                     value={inputSearchSate}
                     onChange={inputSearchChangeHandler}
+                    onFocus={inputSearchFocusHandler}
+                    onBlur={inputSearchBlurHandler}
                 />
 
                 <img src={searchIcon}
