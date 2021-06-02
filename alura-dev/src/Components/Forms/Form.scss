@@ -1,0 +1,74 @@
+%form-interaction-elements{
+    border-radius: 8px;
+    border: none;
+    padding: 1rem  0.875rem;
+    margin-bottom: 24px;
+    width: 100%;
+    height: 56px;
+}
+
+%form-fields{
+    background: rgba(255, 255, 255, 0.16);
+    outline: none;
+    color: rgba(255, 255, 255, 0.64);
+}
+
+fieldset{
+    padding: 0;
+    margin-bottom: 16px
+}
+
+.form-input{
+    @extend %form-interaction-elements;
+    @extend %form-fields;
+    height: 56px;
+} 
+
+.form-textarea{
+    @extend %form-interaction-elements;
+    @extend %form-fields;
+    height: 150px;
+}
+
+.form-color-selector{
+    @extend %form-interaction-elements;
+    @extend %form-fields;
+    background: rgba(196, 196, 196, 0.01);
+    border: 1px solid #FFFFFF;
+    padding: 8px;
+
+    &__color{
+        box-sizing: border-box;
+        display: block;
+        background: #6BD1FF;
+        border-radius: 4px;
+        height: 38px;
+    }
+}
+
+button{
+    @extend %form-interaction-elements;
+    background: #5081FB;
+    border-radius: 8px;
+}
+
+.form-flex-fields{
+  
+    @media (min-width:768px) and (max-width: 1400px){
+        display: flex;
+        justify-content: space-between;
+        
+        .form-input, 
+        .form-color-selector{
+            flex-grow: 1 ;   
+        }
+
+        .form-input{
+            min-width: 400px;
+        }
+
+        .form-color-selector{
+            margin-left: 16px;    
+        }
+    }
+}
