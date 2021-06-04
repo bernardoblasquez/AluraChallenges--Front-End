@@ -1,10 +1,10 @@
 //import styles from './Header.module.scss';
 
 import { useState } from 'react'
+import MenuDropdown from '../Menu/MenuDropdown'
 import './Header.scss';
 import logo from '../../Images/Logo.svg'
 import searchIcon from '../../Images/search-icon.svg' 
-import hamburgerIcon from '../../Images/hamburger-icon.svg' 
 import avatarIcon from '../../Images/Avatar.png' 
 
 const Header = () => {
@@ -54,11 +54,7 @@ const Header = () => {
                 />
             </form>
 
-            <div className="header-menu">
-                <img src={hamburgerIcon} 
-                    className="header-menu__icon"
-                    alt="" />
-            </div>  
+            <MenuDropdown />
 
             <div className="header-user">
                 <img src={avatarIcon} 
