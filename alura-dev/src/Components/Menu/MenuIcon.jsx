@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './MenuIcon.scss'
 
 const MenuLink = (props) => {
