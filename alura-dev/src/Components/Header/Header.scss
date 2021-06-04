@@ -88,24 +88,6 @@
     }
 }
 
-.header-menu{
-    display: flex;
-    height: 56px;
-    align-items: center;
-
-    @media (min-width: 1440px){
-        display: none;
-        width: 100%;
-    }
-}
-
-.header-menu{
-
-    &__icon{
-        @extend %icon-size;
-    }
-}
-
 .header-user{
     display:none;
 
@@ -114,6 +96,7 @@
         justify-content: flex-end;
         flex-flow: row;
         align-items: center;
+        padding: 0 16px 0 0 ;
         width:25%;
     }  
 }
