@@ -46,7 +46,7 @@ fieldset{
     }
 }
 
-button{
+form button{
     @extend %form-interaction-elements;
     background: #5081FB;
     border-radius: 8px;
