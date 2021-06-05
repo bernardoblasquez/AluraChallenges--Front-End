@@ -10,6 +10,11 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+ :root{
+   --input-color: #ffffff;
+   //color:var(--input-color)
+ }
+
 * {
   box-sizing: border-box;
 }
