@@ -5,6 +5,7 @@
 
 .header-app{
     display: flex;
+    position: relative;
     justify-content: flex-start;
     flex-flow: row;
     align-items: center;
@@ -17,74 +18,32 @@
 
 .header-logo{
    // background-color: aqua;
+    position: absolute;
+    top: 27px;
+    left: 16px;
     display: flex;
+    z-index: 1;
     justify-content: flex-start;
     flex-flow: row;
     align-items: center;
     padding: 0 40px 0 0;
+
+    img{
+        z-index: 1;
+    }
+
+    @media (min-width: 768px){
+        position: relative;
+        top: 0;
+        left: 0;
+    }
     
     @media (min-width: 1440px){
+        
         display: flex;
         width: 25%;
         padding: 1rem;
         margin-left: 0;
-    }
-}
-
-
-
-.header-form{
-    display: flex;
-    align-items: center;
-    height: 56px;
-    margin-left: auto;
-
-    @media (min-width: 768px){
-        width: 100%;
-        margin-left: 0;
-    }
-
-    @media (min-width: 1440px){
-        display: block;
-        width: 50%;
-        padding: 0 1rem;
-        margin-left: 0;
-    }
-
-}
-
-.header-form{
-    &__search-input{
-        background: rgba(255, 255, 255, 0.16);
-        border-radius: 8px;
-        height: 56px;
-        border: none;
-        outline: none;
-        color: rgba(255, 255, 255, 0.64);
-        padding: 1rem  0.875rem;
-        width: 100%;
-        max-width: 756px;
-        display: none;
-
-        @media (min-width: 768px){
-            display: flex;
-            margin: auto;
-            width: 100%;
-        }
-
-        @media (min-width: 1440px){
-            margin-left: 0;
-        }
-    }
-
-    &__search-icon{
-        @extend %icon-size;
-
-        @media (min-width: 768px){
-            display: none;
-            width: 100%;
-        }
-        
     }
 }
 
