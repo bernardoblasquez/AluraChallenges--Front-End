@@ -50,15 +50,16 @@ fieldset{
     }
 }
 
-main form button{
+.form-button{
     @extend %form-interaction-elements;
     background: #5081FB;
     border-radius: 8px;
 }
 
 .form-flex-fields{
+
   
-    @media (min-width:768px) and (max-width: 1400px){
+    @media (max-width:960px){
         display: flex;
         justify-content: space-between;
         

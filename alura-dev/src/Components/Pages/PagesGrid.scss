@@ -2,14 +2,21 @@
     padding: 16px;
     width: 25%;
 }
-.editor{
-    background-color: beige;
-}
+
 
 main{
     padding: 0 16px;
 
     @media (min-width: 1440px){
+        display: flex;
+    }
+}
+
+.grid-column{
+    width: 100%;
+
+
+    @media (min-width: 960px){
         display: flex;
     }
 }
@@ -38,6 +45,11 @@ main{
         padding: 0;
         width: 100%;
 
+        @media (min-width: 960px){
+            width: 40%;
+            padding-left: 1rem;
+        }
+
         @media (min-width: 1440px){
             @include menu-column; 
         }
@@ -48,6 +60,10 @@ main{
         padding: 0px;
         width: 100%;
         margin-bottom: 40px;
+
+        @media (min-width: 960px){
+            width: 60%;
+        }
 
         @media (min-width: 1440px){
             width: 50%;
