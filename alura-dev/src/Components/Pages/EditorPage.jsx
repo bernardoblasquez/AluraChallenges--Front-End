@@ -3,10 +3,21 @@ import FormProject from '../Forms/FormProject';
 import FormSelectLanguage from '../Forms/FormSelectLanguage';
 import FormSelectEditorColor from '../Forms/FormSelectEditorColor';
 import CodeEditor from '../CodeEditor/CodeEditor';
+import { useState } from 'react'
 
 import './PagesGrid.scss'
 
 const EditorPage = () =>{
+
+
+    const [selectedLanguage, setSelectedLanguage] = useState('javascript')
+
+    const selectedLanguageHandler = (language) => {
+        console.log(`EditorPage ${language}`)
+
+        setSelectedLanguage(language)
+    }
+
     return(
         <main>
             <section className="grid-column__menu">
@@ -17,7 +28,7 @@ const EditorPage = () =>{
             </section>
 
             <section className="grid-column__editor">
-                <CodeEditor />
+                <CodeEditor  language={selectedLanguage} />
             </section>  
 
             <form className="grid-column__right-menu">
@@ -33,7 +44,7 @@ const EditorPage = () =>{
                         Personalização
                     </legend>
                     <div className="form-flex-fields">
-                        <FormSelectLanguage />
+                        <FormSelectLanguage onSelectLanguage={selectedLanguageHandler}/>
                         <FormSelectEditorColor />
                     </div>
                 </fieldset>
