@@ -26,9 +26,15 @@
         width: 100%;
         padding-top: 40px;
         border-radius: 8px;
-        background-color: #141414;
+        color: white;
+        background-color:rgb(43, 43, 43);
         box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
         overflow: hidden;
+
+        pre{
+            margin: 0;
+            padding: 16px !important;
+        }
 
         &::before{
             content: '';
@@ -46,15 +52,16 @@
 
     &__text-editor{
         @extend %editor-config; 
-        
-        position: relative;
-        background-color: #141414;
-        padding: 16px;
+        background-color:rgb(43, 43, 43);
         color: white;
+        position: relative;
+        padding: 16px;
         font-size: 14px;
         line-height: 18px;
         outline: none;
-        min-height: 302px;
+        min-height: 385px;
+        height: auto !important;
+        
     }
 
     &__highlight-button{
