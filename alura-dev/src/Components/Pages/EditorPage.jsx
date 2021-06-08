@@ -19,7 +19,8 @@ const EditorPage = () =>{
     }
 
     return(
-        <main>
+        
+        <form action="" className="grid-column">
             <section className="grid-column__menu">
                 <h2 className="grid-column__title">
                     Menu
@@ -31,7 +32,7 @@ const EditorPage = () =>{
                 <CodeEditor  language={selectedLanguage} />
             </section>  
 
-            <form className="grid-column__right-menu">
+            <div className="grid-column__right-menu">
                 <fieldset>
                     <legend className="grid-column__title">
                         Seu Projeto
@@ -49,9 +50,9 @@ const EditorPage = () =>{
                     </div>
                 </fieldset>
 
-                <button>Salvar Projeto</button>
-            </form>
-        </main>
+                <button className="form-button">Salvar Projeto</button>
+            </div>
+        </form>
     )
 }
 

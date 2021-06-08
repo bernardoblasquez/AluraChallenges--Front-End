@@ -45,7 +45,7 @@ const CodeEditor = (props) => {
    // console.log(codeEditorState)
 
     return(
-        <form >
+        <>
             <div className="code-editor">
                 <div className="code-editor__window">
 
@@ -81,7 +81,7 @@ const CodeEditor = (props) => {
                 onClick={highlighterCodeHandler}>
                     Visualizar com o highlight
             </button>
-        </form>
+        </>
 
     )
 }
