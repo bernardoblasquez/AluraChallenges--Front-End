@@ -22,6 +22,10 @@ fieldset{
     @extend %form-interaction-elements;
     @extend %form-fields;
     height: 56px;
+
+    option{
+        color: black;
+    } 
 } 
 
 .form-textarea{
