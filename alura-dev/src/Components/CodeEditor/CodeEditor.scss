@@ -15,7 +15,11 @@
     background: #6BD1FF;
     margin-bottom: 32px;
 
-    
+    &--card{
+        @extend .code-editor;
+        padding: 24px;
+        margin-bottom: 0;
+    }
 
     &__window{
         @extend %editor-config; 
