@@ -1,0 +1,49 @@
+
+.code-card{
+
+    background-color: rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+
+    .code-editor__text-editor{
+        min-height: 270px;
+        margin-bottom: 0;
+    }
+
+    .code-editor__window{
+        padding-top: 30px;
+
+        &::before{
+            top: 12px;
+            left: 12px;
+        }
+    }
+
+    .code-editor__window pre{
+        padding: 12px !important;
+    }
+}
+
+.code-card{
+    color:white ;
+
+    &__info{
+        padding: 24px;
+    }
+
+    &__title{
+        margin: 0 0 8px 0;
+        font-size: 21px;
+        font-weight: 700;
+    }
+
+    &__description{
+        margin: 0;
+    }
+
+    &__footer{
+        display: flex;
+        height: 40px;
+        align-items: center;
+        margin-top: 24px;
+    }
+}
