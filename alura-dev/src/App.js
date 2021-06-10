@@ -1,7 +1,9 @@
 import Header from './Components/Header/Header'
-import EditorPage from './Components/Pages/EditorPage';
+import CodeEditorForm from './Components/Pages/CodeEditorForm';
+import CodeCommunity from './Components/Pages/CodeCommunity';
+import CodeView from './Components/Pages/CodeView';
 import { Route } from 'react-router-dom';
-import CommunityPage from './Components/Pages/CommunityPage';
+
 import './App.scss';
 
 function App() {
@@ -10,11 +12,15 @@ function App() {
       <Header />
       <main>
         <Route path="/editor">
-          <EditorPage />
+          <CodeEditorForm />
         </Route>
 
         <Route path="/comunidade">
-          <CommunityPage />
+          <CodeCommunity />
+        </Route>
+
+        <Route path="/view/:codeId">
+          <CodeView />
         </Route>
         
       </main>
