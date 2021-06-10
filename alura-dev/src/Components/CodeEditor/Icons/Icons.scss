@@ -1,0 +1,56 @@
+%hide-overflow-content{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.icon-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 68px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 16px;
+    margin-right: 8px; 
+
+    &--avatar{
+        @extend .icon-box;
+        margin-left: auto;
+        width: 100px;
+    }
+
+    &:hover{
+        transition: background 0.4s;
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    &:active{
+        transition: background 0.4s;
+        background: rgba(255, 255, 255, 0.16);
+
+    }
+
+    &__counter {
+        @extend %hide-overflow-content;
+
+        display: inline-block;
+        margin-left: 8px;
+        width:32px
+    }
+
+    &__user-name {
+        @extend %hide-overflow-content;
+        display: inline-block;
+        margin-left: 8px;
+        
+    }
+
+    &__figure-white{
+        fill: white
+    }
+
+    &__figure-red{
+        transition: fill 0.2s;
+        fill: #F65151;
+    }
+}
