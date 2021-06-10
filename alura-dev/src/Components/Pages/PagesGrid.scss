@@ -73,14 +73,16 @@ main{
 
     &__community{
         color: black;
-        padding: 16px;
         width: 100%;
-        background-color: white;
         margin-bottom: 40px;
 
         @media (min-width: 1440px){
-            width: 75%
+            padding: 16px;
+            width: 75%;
+            //display: flex;
+            //flex-flow: row wrap
         }
     }
+
 }
 
