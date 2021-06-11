@@ -11,6 +11,10 @@ function App() {
     <>
       <Header />
       <main>
+        <Route exact path="/">
+          <CodeEditorForm />
+        </Route>
+
         <Route path="/editor">
           <CodeEditorForm />
         </Route>
