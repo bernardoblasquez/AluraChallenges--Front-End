@@ -2,7 +2,7 @@ import Header from './Components/Header/Header'
 import CodeEditorForm from './Components/Pages/CodeEditorForm';
 import CodeCommunity from './Components/Pages/CodeCommunity';
 import CodeView from './Components/Pages/CodeView';
-import { Route } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import './App.scss';
 
@@ -10,23 +10,27 @@ function App() {
   return (
     <>
       <Header />
+
       <main>
-        <Route exact path="/">
-          <CodeEditorForm />
-        </Route>
 
-        <Route path="/editor">
-          <CodeEditorForm />
-        </Route>
+        <Switch>
+          <Route exact path="/">
+            <Redirect to="/editor" />
+          </Route>
 
-        <Route path="/comunidade">
-          <CodeCommunity />
-        </Route>
+          <Route path="/editor">
+            <CodeEditorForm />
+          </Route>
 
-        <Route path="/view/:codeId">
-          <CodeView />
-        </Route>
-        
+          <Route exact path="/comunidade">
+            <CodeCommunity />
+          </Route>
+
+          <Route path="/comunidade/:codeId">
+            <CodeView />
+          </Route>
+        </Switch>
+
       </main>
     </>
   );
