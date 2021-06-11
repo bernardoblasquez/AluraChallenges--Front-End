@@ -11,6 +11,8 @@
     margin-left: auto;
     width: 100%;
 
+    
+
     @media (min-width: 768px){
         width: 100%;
         margin-left: 0;
@@ -39,6 +41,15 @@
         width: 100%;
         max-width: 756px;
         display: none;
+
+        &:hover{
+            transition: background 0.2s;
+            background-color: rgba(255, 255, 255, 0.24)
+        }
+
+        &:focus{
+            background-color: rgba(255, 255, 255, 0.24)
+        }
 
         @media (min-width: 768px){
             display: flex;
@@ -70,6 +81,19 @@
         height: 48px;
         align-items: center;
         margin-left: auto;
+
+        height: 48px;
+        width: 48px;
+        padding: 0;
+        border-radius: 16px;
+
+        &:hover{
+            background: rgba(80, 129, 251, 0.08)
+        }
+
+        &:active{
+            background: rgba(80, 129, 251, 0.16);
+        }
     }
 }
 
