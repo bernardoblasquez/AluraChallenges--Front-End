@@ -27,7 +27,7 @@
         color: rgba(256, 256, 256, 1);
 
         img{
-            opacity: 1;
+            opacity: 100%;
         }
     }
 
@@ -53,11 +53,11 @@
     color: rgba(256, 256, 256, 1);
 
     &:hover{
-        opacity: 1;
+        opacity: 100%;
     }
 
     &:active{
-        opacity: 1;
+        opacity: 100%;
     }
 
     .menu-link__icon{
