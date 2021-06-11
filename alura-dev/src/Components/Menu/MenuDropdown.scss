@@ -26,6 +26,7 @@
         border-radius: 16px;
 
         &:hover{
+            transition: background 0.2s;
             background: rgba(80, 129, 251, 0.08)
         }
 
