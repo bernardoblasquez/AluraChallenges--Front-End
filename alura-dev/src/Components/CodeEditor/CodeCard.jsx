@@ -1,5 +1,4 @@
 
-import { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import IconLike from './Icons/IconLike';
@@ -13,16 +12,16 @@ const CodeCard = (props) => {
 
     return(
         <div className="code-card">
-            <div className="code-editor--card">
+            <div className={`code-editor--card ${props.bgColor}`}>
                 <div className="code-editor__window">
                     <SyntaxHighlighter 
                         className="code-editor__text-editor" 
-                        language="javascript" 
+                        language={props.language} 
                         style={a11yDark}
                         showLineNumbers
                         wrapLongLines>
                         
-                        {code}
+                        {props.children}
 
                     </SyntaxHighlighter>
                 </div>
