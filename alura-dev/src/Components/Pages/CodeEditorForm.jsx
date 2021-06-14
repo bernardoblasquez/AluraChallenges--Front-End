@@ -1,7 +1,7 @@
 import Menu from '../Menu/Menu';
 import FormProject from '../Forms/FormProject';
-import FormSelectLanguage from '../Forms/FormSelectLanguage';
-import FormSelectEditorColor from '../Forms/FormSelectEditorColor';
+import FormFieldLanguageSelector from '../Forms/FormFieldLanguageSelector';
+import FormFieldColorSelector from '../Forms/FormFieldColorSelector';
 import CodeEditor from '../CodeEditor/CodeEditor';
 import { useState } from 'react'
 
@@ -11,11 +11,39 @@ const EditorPage = () =>{
 
 
     const [selectedLanguage, setSelectedLanguage] = useState('javascript')
+    const [selectedColor, setSelectedColor] = useState('bg-color-blue')
+    const [projectDataName, setProjectDataName] = useState('')
+    const [projectDataDesc, setProjectDataDesc] = useState('')
 
     const selectedLanguageHandler = (language) => {
-        console.log(`EditorPage ${language}`)
-
         setSelectedLanguage(language)
+    }
+
+    const selectedColorHandler = (color) => {
+        setSelectedColor(color)
+    }
+
+    const projectNameHandler = (projectName) => {
+        setProjectDataName(projectName)
+    }
+
+    const projectDescHandler = (projectDesc) => {
+        setProjectDataDesc(projectDesc)
+        
+    }
+
+    const onSaveDataHandler = (event) =>{
+        event.preventDefault();
+
+        const formData = {
+            name: projectDataName,
+            description: projectDataDesc,
+            language: selectedLanguage,
+            bdColorClass: selectedColor,
+        }
+
+        console.log(formData)
+
     }
 
     return(
@@ -29,7 +57,7 @@ const EditorPage = () =>{
             </section>
 
             <section className="grid-column__editor">
-                <CodeEditor  language={selectedLanguage} />
+                <CodeEditor  language={selectedLanguage} bgColor={selectedColor}/>
             </section>  
 
             <div className="grid-column__right-menu">
@@ -37,7 +65,8 @@ const EditorPage = () =>{
                     <legend className="grid-column__title">
                         Seu Projeto
                     </legend>
-                    <FormProject />
+
+                    <FormProject onChangeProjectName={projectNameHandler} onChangeProjectDesc={projectDescHandler}/>
                 </fieldset>
 
                 <fieldset>
@@ -45,12 +74,12 @@ const EditorPage = () =>{
                         Personalização
                     </legend>
                     <div className="form-flex-fields">
-                        <FormSelectLanguage onSelectLanguage={selectedLanguageHandler}/>
-                        <FormSelectEditorColor />
+                        <FormFieldLanguageSelector onSelectLanguage={selectedLanguageHandler}/>
+                        <FormFieldColorSelector onSelectColorHandler={selectedColorHandler} />
                     </div>
                 </fieldset>
 
-                <button className="form-button">Salvar Projeto</button>
+                <button onClick={onSaveDataHandler} className="form-button">Salvar Projeto</button>
             </div>
         </form>
     )

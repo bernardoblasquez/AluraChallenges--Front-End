@@ -15,7 +15,6 @@ const CodeEditor = (props) => {
 
     const codeEditorChangeHandler = (event) => {
         let codeEditorContent = event.target.value;
-
         setCodeEditorSate(codeEditorContent)
     }
 
@@ -46,7 +45,7 @@ const CodeEditor = (props) => {
 
     return(
         <>
-            <div className="code-editor">
+            <div className={`code-editor ${props.bgColor}`}>
                 <div className="code-editor__window">
 
                     {

@@ -11,11 +11,12 @@ const FormProject = (props) => {
     const [projectNameFocusState, setProjectNameFocusState] = useState(false);
     const [projectDescriptionState, setProjectDescriptionState] = useState(projectDescriptionText);
     const [projectDescriptionFocusState, setProjectDescriptionFocusState] = useState(false);
+   
 
     const projectNameChangeHandler = (event) =>{
         let projectName = event.target.value;
-         
         setProjectNameState(projectName)
+        props.onChangeProjectName(projectName)
     }
 
     const projectNameFocusHandler = () =>{
@@ -34,8 +35,8 @@ const FormProject = (props) => {
 
     const projectDescriptionChangeHandler = (event) =>{
         let projectDescription = event.target.value;
-         
         setProjectDescriptionState(projectDescription)
+        props.onChangeProjectDesc(projectDescription)
     }
 
     const projectDescriptionFocusHandler = (event) =>{
@@ -52,8 +53,6 @@ const FormProject = (props) => {
         }
     }
 
-    console.log(projectNameState)
-    console.log(projectDescriptionState)
 
     return(
         <div>

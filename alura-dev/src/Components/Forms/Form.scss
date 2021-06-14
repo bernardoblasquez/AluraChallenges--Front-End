@@ -44,21 +44,6 @@ fieldset{
     height: 150px;
 }
 
-.form-color-selector{
-    @extend %form-interaction-elements;
-    @extend %form-fields;
-    background: rgba(196, 196, 196, 0.01);
-    border: 1px solid #FFFFFF;
-    padding: 8px;
-
-    &__color{
-        box-sizing: border-box;
-        display: block;
-        background: #6BD1FF;
-        border-radius: 4px;
-        height: 38px;
-    }
-}
 
 .form-button{
     @extend %form-interaction-elements;
@@ -67,9 +52,9 @@ fieldset{
 }
 
 .form-flex-fields{
-
+    
   
-    @media (max-width:960px){
+    @media (min-width: 768px) and (max-width:960px){
         display: flex;
         justify-content: space-between;
         
@@ -87,3 +72,4 @@ fieldset{
         }
     }
 }
+

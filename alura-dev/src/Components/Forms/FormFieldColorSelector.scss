@@ -1,0 +1,61 @@
+@import './Form.scss';
+
+%item-bg-color{
+    height: 36px;
+}
+
+.dropdown-color{
+
+    &__box{
+        position: relative;
+        top: 4px;
+
+        z-index: 10;
+        height: auto;
+        background-color: #2d415b;
+        border-radius: 0 0 8px 8px ;
+        padding-bottom: 16px;
+
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__item{
+        @extend %item-bg-color;
+    }
+}
+
+.bg-color-blue{
+    background-color: #6BD1FF;
+}
+
+.bg-color-green{
+    background-color: #9AFF6B;
+}
+
+.bg-color-orange{
+    background-color: #FFC46B;
+}
+
+.bg-color-pink{
+    background: #FF6BCD;
+}
+
+
+.form-color-selector{
+    @extend %form-interaction-elements;
+    @extend %form-fields;
+    position: relative;
+    background: rgba(196, 196, 196, 0.01);
+    border: 1px solid #FFFFFF;
+    padding: 8px;
+
+    &__selected-color{
+        box-sizing: border-box;
+        display: block;
+        
+        border-radius: 4px;
+        height: 38px;
+    }
+
+}

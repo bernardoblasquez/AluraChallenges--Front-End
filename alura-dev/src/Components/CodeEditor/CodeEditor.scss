@@ -12,13 +12,21 @@
     display: flex;
     flex-direction: column;
     padding: 32px;
-    background: #6BD1FF;
     margin-bottom: 32px;
 
     &--card{
         @extend .code-editor;
         padding: 24px;
         margin-bottom: 0;
+
+        .code-editor__window{
+            overflow: hidden;
+            height: 280px;
+
+            pre{
+                overflow: hidden
+            }
+        }
     }
 
     &__window{
@@ -79,3 +87,18 @@
     }
 }
 
+.bg-color-blue{
+    background-color: #6BD1FF;
+}
+
+.bg-color-green{
+    background-color: #9AFF6B;
+}
+
+.bg-color-orange{
+    background-color: #FFC46B;
+}
+
+.bg-color-pink{
+    background: #FF6BCD;
+}
