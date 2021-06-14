@@ -1,5 +1,5 @@
 # Alura Challenges: Front-End
-Participação no Alura Challenges 2021 focado em desenvolvimento Front-End. Para ver a aplicação basta acessar: https://alura-challenges-front-end-v2-lqu25dt6k-bernardoblasquez.vercel.app/editor 
+Participação no Alura Challenges 2021 focado em desenvolvimento Front-End. Para ver a aplicação basta acessar: https://alura-challenges-front-end-v2-9cx36hvsv-bernardoblasquez.vercel.app
 
 
 
