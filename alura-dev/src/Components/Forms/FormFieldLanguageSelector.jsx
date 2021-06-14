@@ -1,7 +1,7 @@
 import './Form.scss';
 
 
-const FormSelectLanguage = (props) => {
+const FormFieldLanguageSelector = (props) => {
 
 
     const selectChangeHandler = (event) => {
@@ -24,4 +24,4 @@ const FormSelectLanguage = (props) => {
     )
 }
 
-export default FormSelectLanguage;
+export default FormFieldLanguageSelector;
