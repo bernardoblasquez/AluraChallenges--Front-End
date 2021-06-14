@@ -1,11 +1,12 @@
 import CodeCard from "./CodeCard";
 import "./CodeCardList.scss";
 
-const CodeCardList = () => {
+const CodeCardList = (props) => {
+
     return(
         <ul className="code-card-list">
             <li className="code-card-list__item">
-                <CodeCard labguage="javascript" bgColor="code-editor--bg-color-orange">
+                <CodeCard labguage="javascript" bgColor="bg-color-blue">
                 {`
     class MyClass {
         public static myValue: string;
@@ -25,7 +26,7 @@ const CodeCardList = () => {
                 </CodeCard>
             </li>
             <li className="code-card-list__item">
-                <CodeCard labguage="json" bgColor="code-editor--bg-color-blue">
+                <CodeCard labguage="json" bgColor="bg-color-green">
                 {`
     [
         {
@@ -43,7 +44,7 @@ const CodeCardList = () => {
                 </CodeCard>
             </li>
             <li className="code-card-list__item">
-                <CodeCard labguage="css" bgColor="code-editor--bg-color-pink">
+                <CodeCard labguage="css" bgColor="bg-color-pink">
                 {`
     @font-face {
         font-family: Chunkfive; src: url('Chunkfive.otf');
@@ -65,7 +66,7 @@ const CodeCardList = () => {
                 </CodeCard>
             </li>
             <li className="code-card-list__item">
-                <CodeCard labguage="html" bgColor="code-editor--bg-color-green">
+                <CodeCard labguage="html" bgColor="bg-color-orange">
                     {`  
     <!DOCTYPE html>
     <title>Title</title>
