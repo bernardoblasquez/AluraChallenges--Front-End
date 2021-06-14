@@ -1,6 +1,7 @@
 # Alura Challenges: Front-End
-Participação no Alura Challenges 2021 focado em desenvolvimento Front-End.
-- 
+Participação no Alura Challenges 2021 focado em desenvolvimento Front-End. Para ver a aplicação basta acessar: https://alura-challenges-front-end-v2-lqu25dt6k-bernardoblasquez.vercel.app/editor 
+
+
 
 ## Como está organizado esse repositório?
 O Alura Challenges ocorreu ao longo de 4 semanas. Para organizar melhor o repositório os desafios de cada semana estao separados em branches diferentes.
