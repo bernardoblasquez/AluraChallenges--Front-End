@@ -1,14 +1,12 @@
 
-import Menu from '../Menu/Menu';
-import CodeCard from '../CodeEditor/CodeCard';
-import CodeCardList from '../CodeEditor/CodeCardList';
+import Menu from '../Components/Menu/Menu';
+import CodeCardList from '../Components/CodeEditor/CodeCardList';
 
 import './PagesGrid.scss'
 
-const CommunityPage = () =>{
+const CommunityPage = (props) =>{
     return(
         <div className="grid-column">
-
             <section className="grid-column__menu">
                 <h2 className="grid-column__title">
                     Menu
@@ -17,10 +15,8 @@ const CommunityPage = () =>{
             </section>
 
             <div className="grid-column__community">
-                <CodeCardList />
+                <CodeCardList listOfCodes={props.listOfCodes} />
             </div>
-
-
         </div>
     )
 }

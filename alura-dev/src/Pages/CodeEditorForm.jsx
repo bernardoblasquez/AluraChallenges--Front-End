@@ -1,8 +1,8 @@
-import Menu from '../Menu/Menu';
-import FormProject from '../Forms/FormProject';
-import FormFieldLanguageSelector from '../Forms/FormFieldLanguageSelector';
-import FormFieldColorSelector from '../Forms/FormFieldColorSelector';
-import CodeEditor from '../CodeEditor/CodeEditor';
+import Menu from '../Components/Menu/Menu';
+import FormProject from '../Components/Forms/FormProject';
+import FormFieldLanguageSelector from '../Components/Forms/FormFieldLanguageSelector';
+import FormFieldColorSelector from '../Components/Forms/FormFieldColorSelector';
+import CodeEditor from '../Components/CodeEditor/CodeEditor'
 import { useState } from 'react'
 
 import './PagesGrid.scss'
