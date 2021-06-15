@@ -29,15 +29,15 @@ const CodeCard = (props) => {
             
             <div className="code-card__info">
                 <h3 className="code-card__title">
-                    Título do projeto
+                    {props.title}
                 </h3>
                 <p className="code-card__description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique tristique pharetra. 
+                    {props.description}
                 </p>
 
                 <footer className="code-card__footer">
-                    <IconComments counter="40" />
-                    <IconLike counter="90"/>
+                    <IconComments counter={props.totalOfComments} />
+                    <IconLike counter={props.totalOfLikes}/>
                     <IconAvatar userName="Harry"/>
                 </footer>
             </div>
