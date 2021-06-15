@@ -39,19 +39,25 @@ const EditorPage = (props) =>{
     const onSaveDataHandler = (event) =>{
         event.preventDefault();
 
-        const formData = {
-            title: projectDataName,
-            description: projectDataDesc,
-            language: selectedLanguage,
-            bgColorClass: selectedColor,
-            totalOfComments: 0,
-            totalOfLikes: 0,
-            codeText: projectCodeText
+        if (projectCodeText === ''){
+            console.log("Vc deve inserir um código para poder salvar o projeto")
+            console.log("Modal de Erro")
         }
-
-        console.log(formData);
-        props.onSaveNewCode(formData)
-
+        else{
+            console.log("Salvando projeto...")
+            const formData = {
+                title: projectDataName,
+                description: projectDataDesc,
+                language: selectedLanguage,
+                bgColorClass: selectedColor,
+                totalOfComments: 0,
+                totalOfLikes: 0,
+                codeText: projectCodeText
+            }
+    
+            console.log(formData);
+            props.onSaveNewCode(formData)
+        }
     }
 
     return(
