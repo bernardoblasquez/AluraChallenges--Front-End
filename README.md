@@ -1,7 +1,7 @@
 # Alura Challenges: Front-End
 O Alura Challenges Front End 2021 foi um desafio proposto pela Alura ao seus alunos para possibilitar a práticas das tecnologias de front-end aprendidas em seus cursos. O desafio consistia em desenvolver um site responsivo a partir de um protótipo fornecido pela Alura através do Figma. 
 
-Qualquer tecnologia de front-end poderia ser ser utilizada, no meu caso utilizei o ReactJS. Para ver a aplicação qu desenvolvi basta acessar: https://alura-challenges-front-end-v2-9cx36hvsv-bernardoblasquez.vercel.app
+Qualquer tecnologia de front-end poderia ser ser utilizada, no meu caso utilizei o ReactJS. Para ver a aplicação qu desenvolvi basta acessar: https://alura-challenges-front-end-v2-3hy5p53m2-bernardoblasquez.vercel.app/comunidade
 
 O desafio ocorreu durante quatro semanas onde uma lista de tarefas eram disponibilizadas via Trello. 
 
