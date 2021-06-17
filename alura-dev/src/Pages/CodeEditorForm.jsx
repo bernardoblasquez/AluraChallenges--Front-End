@@ -36,6 +36,13 @@ const EditorPage = (props) =>{
         setProjectCodeText(projectCodeText) 
     }
 
+    const newIdGenerator = () =>{
+        const idNumberFromDate = new Date().getTime()
+        const prefix = 'ad_'
+
+        return prefix + idNumberFromDate.toString()
+    }
+
     const onSaveDataHandler = (event) =>{
         event.preventDefault();
 
@@ -45,7 +52,9 @@ const EditorPage = (props) =>{
         }
         else{
             console.log("Salvando projeto...")
+            console.log(props.listOfCodesLength)
             const formData = {
+                id: newIdGenerator(),
                 title: projectDataName,
                 description: projectDataDesc,
                 language: selectedLanguage,
@@ -55,7 +64,7 @@ const EditorPage = (props) =>{
                 codeText: projectCodeText
             }
     
-            console.log(formData);
+            //console.log(formData);
             props.onSaveNewCode(formData)
         }
     }
@@ -71,7 +80,11 @@ const EditorPage = (props) =>{
             </section>
 
             <section className="grid-column__editor">
-                <CodeEditor onChangeCodeText={projectCodeTextHandler}  language={selectedLanguage} bgColor={selectedColor}/>
+                <CodeEditor 
+                    onChangeCodeText={projectCodeTextHandler}  
+                    listOfCodesLength={props.listOfCodesLength}
+                    language={selectedLanguage} 
+                    bgColor={selectedColor}/>
             </section>  
 
             <div className="grid-column__right-menu">
