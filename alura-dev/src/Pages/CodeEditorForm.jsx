@@ -7,13 +7,14 @@ import { useState } from 'react'
 
 import './PagesGrid.scss'
 
-const EditorPage = () =>{
+const EditorPage = (props) =>{
 
 
     const [selectedLanguage, setSelectedLanguage] = useState('javascript')
     const [selectedColor, setSelectedColor] = useState('bg-color-blue')
     const [projectDataName, setProjectDataName] = useState('')
     const [projectDataDesc, setProjectDataDesc] = useState('')
+    const [projectCodeText, setProjectCodeText] = useState('')
 
     const selectedLanguageHandler = (language) => {
         setSelectedLanguage(language)
@@ -28,22 +29,44 @@ const EditorPage = () =>{
     }
 
     const projectDescHandler = (projectDesc) => {
-        setProjectDataDesc(projectDesc)
-        
+        setProjectDataDesc(projectDesc) 
+    }
+
+    const projectCodeTextHandler = (projectCodeText) => {
+        setProjectCodeText(projectCodeText) 
+    }
+
+    const newIdGenerator = () =>{
+        const idNumberFromDate = new Date().getTime()
+        const prefix = 'ad_'
+
+        return prefix + idNumberFromDate.toString()
     }
 
     const onSaveDataHandler = (event) =>{
         event.preventDefault();
 
-        const formData = {
-            name: projectDataName,
-            description: projectDataDesc,
-            language: selectedLanguage,
-            bdColorClass: selectedColor,
+        if (projectCodeText === ''){
+            console.log("Vc deve inserir um código para poder salvar o projeto")
+            console.log("Modal de Erro")
         }
-
-        console.log(formData)
-
+        else{
+            console.log("Salvando projeto...")
+            console.log(props.listOfCodesLength)
+            const formData = {
+                id: newIdGenerator(),
+                title: projectDataName,
+                description: projectDataDesc,
+                language: selectedLanguage,
+                bgColorClass: selectedColor,
+                totalOfComments: 0,
+                totalOfLikes: 0,
+                codeText: projectCodeText
+            }
+    
+            //console.log(formData);
+            props.onSaveNewCode(formData)
+        }
     }
 
     return(
@@ -57,7 +80,11 @@ const EditorPage = () =>{
             </section>
 
             <section className="grid-column__editor">
-                <CodeEditor  language={selectedLanguage} bgColor={selectedColor}/>
+                <CodeEditor 
+                    onChangeCodeText={projectCodeTextHandler}  
+                    listOfCodesLength={props.listOfCodesLength}
+                    language={selectedLanguage} 
+                    bgColor={selectedColor}/>
             </section>  
 
             <div className="grid-column__right-menu">

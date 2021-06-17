@@ -4,27 +4,35 @@ import "./CodeCardList.scss";
 
 const CodeCardList = (props) => {
 
-    console.log(JSON.stringify({codeText: props.listOfCodes[3].codeText}));
+    let listOfCodes = '';
+
+    if (props.listOfCodes.length === 0){
+        listOfCodes = <p>não há dados</p>
+    } 
+    else{
+        listOfCodes = props.listOfCodes.map((code, index) => {
+            return(
+                <li key={index} className="code-card-list__item">
+                    <CodeCard  title={code.title}
+                        description={code.description}
+                        language={code.language} 
+                        bgColor={code.bgColorClass}
+                        totalOfComments={code.totalOfComments}
+                        totalOfLikes={code.totalOfLikes}
+                        className={index}>
+                            
+                        {code.codeText}
+                </CodeCard>
+            </li>
+            )
+        })
+    }
+
 
     return(
         
         <ul className="code-card-list">
-            {props.listOfCodes.map((code, index) => {
-                return(
-                    <li key={index} className="code-card-list__item">
-                        <CodeCard  title={code.title}
-                            description={code.description}
-                            language={code.language} 
-                            bgColor={code.bgColor}
-                            totalOfComments={code.totalOfComments}
-                            totalOfLikes={code.totalOfLikes}
-                            className={index}>
-                                
-                            {code.codeText}
-                    </CodeCard>
-                </li>
-                )
-            })}
+            {listOfCodes}
         </ul>
         
     )

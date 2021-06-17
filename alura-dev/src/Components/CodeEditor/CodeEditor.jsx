@@ -16,6 +16,7 @@ const CodeEditor = (props) => {
     const codeEditorChangeHandler = (event) => {
         let codeEditorContent = event.target.value;
         setCodeEditorSate(codeEditorContent)
+        props.onChangeCodeText(codeEditorContent)
     }
 
     const codeEditorFocusHandler = () => {
