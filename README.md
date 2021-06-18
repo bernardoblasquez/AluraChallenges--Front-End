@@ -1,27 +1,15 @@
-# Alura Challenges: Front-End
-Participação no Alura Challenges 2021 focado em desenvolvimento Front-End. Para ver a aplicação basta acessar: https://alura-challenges-front-end-v2-lqu25dt6k-bernardoblasquez.vercel.app/editor 
+# (SEMANA 3 e 4) Alura Challenges: Front-End
+Aqui você irá encontrar a descrição um pouco mais detalhada da principais alterações e adições que fiz no site durante a Semana 3 e 4 do desafio. Vou procurar explicar melhor também as soluções que utilizei ou problemas que esbarrei por não entender um determinado conceito em reactJs 
 
 
+## O que foi feito? 
+Descrição
 
-## Como está organizado esse repositório?
-O Alura Challenges ocorreu ao longo de 4 semanas. Para organizar melhor o repositório os desafios de cada semana estao separados em branches diferentes.
+## Bugs e Soluções
+useEffect, loop infinito e o problema da passagem de valor - tamando do 'listOfCodes' - que gerava bug
+problema relacionado a maneira como o useEffect funciona.
 
-## Tecnologias utilizadas
---
-
-
-# Semana 01
-
-## Referências
-- https://trello.com/b/yr8iUfSz/desafio-front-end-semana-01
-- https://www.figma.com/file/Ve4hpTfmMa7yAFneoGtGKD/Alura-Challenge---Edi%C3%A7%C3%A3o-Front-end?node-id=207%3A729&viewport=86%2C-1148%2C0.3736729025840759
-- https://www.npmjs.com/package/react-syntax-highlighter
-
-# Semana 02
-- https://trello.com/b/cx6kSI5C/desafio-front-end-semana-2
-- https://www.figma.com/file/Ve4hpTfmMa7yAFneoGtGKD/Alura-Challenge---Edi%C3%A7%C3%A3o-Front-end?node-id=17%3A3367&viewport=86%2C-1148%2C0.3736729025840759
-
-# Semana 03
-
-
-# Semana 04
+# Referências
+- mapamental do whimsical: https://whimsical.com/react-mindmap-QionexRpXqSzugjv7Wyqsh
+- Aulas 110 à 114 do treinamento de React do Udemy do Maximilian Schwarzmuller
+- Aula 3 do treinamento de React Router da Alura
