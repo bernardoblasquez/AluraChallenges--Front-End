@@ -15,19 +15,12 @@ function App() {
 
   const idLocalStorage = "aluraDev/listOfCODES";
   const [listOfCodes, setListOfCode] = useState('');
-
-  
-  //console.log(`opa: ${JSON.parse(localStorage.getItem(idLocalStorage))}`)
   
   useEffect(()=>{
-
     searchLocalStorage("aluraDev/listOfCODES", setListOfCode);
-    console.log("entrei no useEffect")
-
   },[])
 
   const updateListOfCodesHandler = (newCode) => {
-
     setListOfCode((prevListOfCodes) => {
       localStorage.setItem(idLocalStorage, JSON.stringify([...prevListOfCodes, newCode]))
       return [...prevListOfCodes, newCode]
