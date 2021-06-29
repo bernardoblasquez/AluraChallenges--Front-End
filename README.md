@@ -1,3 +1,8 @@
+# Organização após refarotação do código:
+https://whimsical.com/alura-challenges-2Hd27jaBNF53cdxv2oGtrF
+
+
+
 # Alura Challenges: Front-End
 O Alura Challenges Front End 2021 foi um desafio proposto pela Alura ao seus alunos para possibilitar a práticas das tecnologias de front-end aprendidas em seus cursos. O desafio consistia em desenvolver um site responsivo a partir de um protótipo fornecido pela Alura através do Figma. 
 
