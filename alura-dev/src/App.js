@@ -6,6 +6,7 @@ import CodeCommunity from './Pages/CodeCommunity';
 import Page404 from './Pages/Page404';
 import CodeView from './Pages/CodeView';
 import searchLocalStorage from './LocalStorage/searchLocalStorage';
+import Modal from './UI/Modal'
 import './App.scss';
 
 
@@ -29,6 +30,8 @@ function App() {
 
   return (
     <>
+      
+
       <Header />
       <main>
 
