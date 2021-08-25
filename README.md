@@ -1,3 +1,8 @@
+# Organização após refarotação do código:
+https://whimsical.com/alura-challenges-2Hd27jaBNF53cdxv2oGtrF
+
+
+
 # Alura Challenges: Front-End
 O Challenges é um desafio proposto pela Alura aos seus alunos para a prática das tecnologias de front-end. O desafio dessa primeira edição consistiu em desenvolver um site responsivo a partir de um protótipo fornecido pela Alura através do Figma. 
 
