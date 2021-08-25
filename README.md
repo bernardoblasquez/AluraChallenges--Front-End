@@ -17,8 +17,10 @@ O Alura Challenges ocorreu ao longo de 4 semanas. Para organizar melhor o reposi
 - Semana 2: desenvolvimento da página com listagem de códigos, do componente de syntax highlitght com o pacote react-syntax-highlighter e das rotas, utilizando do react-router-dom. Implementação das micro interções do site.
 - Semana 3: modelagem dos dados que serão lidos em JSON, passagem de valores entre os componentes via props, salvamento de dados novos inseridos utilizando localStorage do javascript.
 
-Depois das 4 primeiras semanas, quando o desafio já havia terminado, eu continuei fazendo alterações e melhorias no projeto. Abaixo tem um resumo do que foi feito e a respectiva branch:
-- Refactoring--portals-and-Context: refatoração de uso de variaveis de contexto. A aplicação tinha sido desenvolvida usando uma técnica chamada "litf the state up" e a partir dessa branch começo a usar variaveis de contexto.
+Depois das 3 primeiras semanas, após o término do desafio, resolvi modificar o projeto, melhorando o design e usando recursos do React que não havia usado até então (ainda em desenvolvimento - olhar a aba de projetos). 
+- a melhora de design está focada na simplificaçãoda ideia do projeto: focar em códigos curtos e somente em poucas linguagens para web  e retirar toda a parte do design relacionado a comunidade. Então teremos as funcionalidades de adicionar código, lista-los e ter uma página com mais detalhes sobre o código salvo.
+- entre os recursos não utilizado: context API, Refs, hooks personalizados, criação de testes...
+
 
 ## Tecnologias e bibliotecas utilizadas
 - Normalize
